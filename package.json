@@ -105,10 +105,11 @@
   },
   "peerDependencies": {
     "@djforth/data_manager_fp": "1.0.2",
+    "ajax-es6-module": "^1.0.2",
     "classnames": "^2.2.3",
     "flux": "^2.1.1",
     "immutable": "^3.8.1",
-    "lodash": "^4.11.1",
+    "lodash": "^4.11.*",
     "moment": "^2.13.0",
     "moment-strftime": "^0.1.5",
     "morse-react-mixins": "^1.2.0",
@@ -116,5 +117,6 @@
     "react-dom": "^15.0.1",
     "react-jasmine": "^1.1.0",
     "viewport-detection-es6": "^2.1.2"
-  }
+  },
+  "dependencies": {}
 }
