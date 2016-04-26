@@ -1,3 +1,5 @@
+// Libraries
+const React = require('react');
 
 module.exports = function(props){
   let st = props.start.get('fmt');

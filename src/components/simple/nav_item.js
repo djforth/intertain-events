@@ -1,3 +1,5 @@
+// Libraries
+const React = require('react');
 
 module.exports = function(props){
   let css = `osw_l alpha button button_tertiary cardboard ${props.active}`;

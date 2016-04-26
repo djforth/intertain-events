@@ -1,3 +1,5 @@
+// Libraries
+const React = require('react');
 
 module.exports = function(props){
   if (!props.url) return '';
