@@ -79,7 +79,7 @@
   },
   "homepage": "https://github.com/djforth/intertain-events#readme",
   "devDependencies": {
-    "@djforth/data_manager_fp": "1.0.2",
+    "@djforth/data_manager_fp": "1.0.3",
     "@djforth/ap_karma": "^1.1.12",
     "@djforth/ap_utils": "^2.0.13",
     "@djforth/morse-jasmine": "^1.0.17",
@@ -100,11 +100,11 @@
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
-    "react-jasmine": "^1.1.0",
-    "viewport-detection-es6": "^2.1.2"
+    "react-jasmine": "^1.1.1",
+    "viewport-detection-es6": "^2.1.3"
   },
   "peerDependencies": {
-    "@djforth/data_manager_fp": "1.0.2",
+    "@djforth/data_manager_fp": "1.0.3",
     "ajax-es6-module": "^1.0.2",
     "classnames": "^2.2.3",
     "flux": "^2.1.1",
