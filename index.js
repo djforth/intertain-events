@@ -1,1 +1,1 @@
-module.exports = require('./lib/components/event_listing')
+module.exports = require('./lib/components/events_listing');
