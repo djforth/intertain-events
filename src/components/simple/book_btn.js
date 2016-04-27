@@ -2,7 +2,7 @@
 const React = require('react');
 
 module.exports = function(props){
-  if (!props.url) return '';
+  if (!props.url) return null;
   return (
     <div className="clearfix">
       <div className="booking distressed">
