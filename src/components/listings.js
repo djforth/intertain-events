@@ -55,18 +55,23 @@ class Listings extends React.Component{
     if (this.state.events.size === 0){
       return (<p><strong>There are no events available</strong></p>);
     }
-
     return this.state.events.map((event)=>{
-      return (<Listing event={event} key={event.get('id')} />);
+      return (
+        <Listing
+          event={event}
+          css_manager={this.props.css_manager}
+          key={event.get('id')} />
+        );
     });
   }
 
   _showPagination(){
     if (!this.state.show_pagination) return '';
     if (this.state.events.size === 0) return '';
+    let cm = this.props.css_manager;
     return (
-      <div className="clearfix paginate">
-        <a className="paginate_btn"
+      <div className={cm('paginate.wrapper')}>
+        <a className={cm('paginate.button')}
             href="#"
             onClick={this._loadMore.bind(this)}>
           Load More
@@ -76,9 +81,10 @@ class Listings extends React.Component{
   }
 
   render(){
+    let cm = this.props.css_manager;
     return (
-      <div className="book_area cardboard events panel clearfix">
-        <div className="panel_content events-listing">
+      <div className={cm('panel.wrapper')}>
+        <div className={cm('panel.inner')}>
           {this._renderListing()}
         </div>
 

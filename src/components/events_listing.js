@@ -2,6 +2,8 @@
 const React = require('react')
     , _     = require('lodash/core');
 
+const CssManager = require('../utils/css_manager');
+
 const EventsActions = require('../actions/events_actions');
 
 const ViewportDetect = require('viewport-detection-es6');
@@ -15,7 +17,7 @@ class EventsListing extends React.Component{
   constructor(props){
     super(props);
     EventsActions.setKey(props.tabs.key);
-    this.state = {};
+    this.state = {css_manager: CssManager(this.props.css)};
   }
 
   /* Component life cycle */
@@ -46,8 +48,8 @@ class EventsListing extends React.Component{
 
   render(){
     return (<div>
-      <Nav items={this.props.tabs.items} />
-      <Listings />
+      <Nav items={this.props.tabs.items} css_manager={this.state.css_manager} />
+      <Listings css_manager={this.state.css_manager}/>
     </div>);
   }
 }

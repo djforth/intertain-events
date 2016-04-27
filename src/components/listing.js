@@ -1,3 +1,5 @@
+// Libraries
+const React = require('react');
 
 // Components
 const BookBtn     = require('./simple/book_btn')
@@ -13,23 +15,24 @@ function manage_event(event){
 
 module.exports = function(props){
   let event = manage_event(props.event);
+  let css_manager = props.css_manager;
   return (
-    <article className="event">
+    <article className={css_manager('listings.wrapper')}>
       <div className="content_left">
-        <div className="image_container bookings_event">
+        <div className={css_manager('listings.img')}>
           <ImgTag asset={event('asset')} />
         </div>
       </div>
       <div className="content_right">
-        <h1 className="osw_l beta">{event('title')}</h1>
-        <span className="date eta">
+        <h1 className={css_manager('listings.title')}>{event('title')}</h1>
+        <span className={css_manager('listings.date')}>
           <DateDisplay
             start={event('start_time')}
             finish={event('finish_time')}
           />
         </span>
-        <GuestList url={event('guestlist')} />
-        <BookBtn url={event('booking')} />
+        <GuestList url={event('guestlist')} css={css_manager('guestlist')} />
+        <BookBtn url={event('booking')} css={css_manager('book')} />
       </div>
     </article>
   );

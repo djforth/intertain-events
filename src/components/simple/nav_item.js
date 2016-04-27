@@ -2,7 +2,7 @@
 const React = require('react');
 
 module.exports = function(props){
-  let css = `osw_l alpha button button_tertiary cardboard ${props.active}`;
+  let css = `${props.css} ${props.active}`;
   return (
     <li>
       <a className={css} href="#" onClick={props.onclick}>

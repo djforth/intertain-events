@@ -2,11 +2,11 @@
 const React = require('react');
 
 module.exports = function(props){
-  if (!props.url) return null;
+  if (!props.url) return '';
   return (
     <div className="clearfix">
-      <div className="booking distressed">
-        <a className="button button_book_small" href={props.url}>
+      <div className={props.css.wrapper}>
+        <a className={props.css.button}href={props.url}>
           Book a table
         </a>
       </div>

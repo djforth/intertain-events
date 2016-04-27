@@ -18,14 +18,15 @@ function setKey(key){
 class Nav extends React.Component{
   constructor(props){
     super(props);
-    this.nav = ['tabbed_navigation_wrapper', {hidden: false}];
+
+    this.nav = [props.css_manager('tabs.wrapper'), {hidden: false}];
     this.state = {active: 'all', nav: this.getClasses(this.nav)};
   }
 
   _isActive(key){
     key = setKey(key);
     let type = EventsStore._getType().toLowerCase();
-    return (type === key) ? 'active' : '';
+    return (type === key) ? this.props.css_manager('tabs.active') : '';
   }
 
   componentDidMount(){
@@ -61,6 +62,7 @@ class Nav extends React.Component{
       return _.map(this.props.items, (item)=>{
         return (<NavItem title={item}
                 active={this._isActive(item)}
+                css={this.props.css_manager('tabs.tab')}
                 key={`nav_${item}`}
                 onclick={this._onClick.bind(this, item)} />);
       });
@@ -70,16 +72,17 @@ class Nav extends React.Component{
   }
 
   render(){
+    let cm = this.props.css_manager;
     return (
-      <div className="tabbed_navigation">
-        <a className="osw_l alpha button button_tertiary cardboard menu_trigger"
+      <div className={cm('tabs.holder')}>
+        <a className={cm('tabs.menu')}
             href="#"
             onClick={this._openNav.bind(this)}>
             Change Events Type
           </a>
         <nav className={this.state.nav}>
 
-           <ul className="menu_navigation tertiary_navigation clearfix">
+           <ul className={cm('tabs.tabs.holder')}>
               {this._renderNavItems()}
           </ul>
         </nav>
