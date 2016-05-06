@@ -8,7 +8,7 @@ const styles = {
     , button: 'button button_book_small'
   }
   , guestlist: {
-    wrapper: 'booking distressed'
+    wrapper: 'guestlist distressed'
     , button: 'button button_guestlist'
   }
 
