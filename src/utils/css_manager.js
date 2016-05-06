@@ -9,7 +9,7 @@ const styles = {
   }
   , guestlist: {
     wrapper: 'booking distressed'
-    , button: 'button button_book_guestlist'
+    , button: 'button button_guestlist'
   }
 
   , listings: {
@@ -33,7 +33,7 @@ const styles = {
   , tabs: {
     holder: 'tabbed_navigation'
     , menu: 'osw_l alpha button button_tertiary cardboard menu_trigger'
-    , wrapper: 'tabbed_navigation_wrapper'
+    , wrapper: 'tabbed_navigation_wrapper clearfix'
     , tabs_holder: 'menu_navigation tertiary_navigation clearfix'
     , tab: 'osw_l alpha button button_tertiary cardboard'
     , active: 'active'
